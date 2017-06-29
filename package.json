@@ -1,0 +1,29 @@
+{
+  "name": "repo-cooker-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "commitmsg": "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
+    "postinstall": "npm run setup",
+    "postsetup": "echo repo-cooker link",
+    "setup": "echo repo-cooker prepublish"
+  },
+  "dependencies": {
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-customizable": "^5.0.0",
+    "cz-customizable-ghooks": "^1.5.0",
+    "husky": "^0.14.1"
+  }
+}
