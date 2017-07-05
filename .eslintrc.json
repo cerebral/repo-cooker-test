@@ -16,9 +16,7 @@
   ],
   "extends": [
     "standard",
-    "standard-jsx",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
   "rules": {
     "prettier/prettier": [

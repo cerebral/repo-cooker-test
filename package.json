@@ -8,7 +8,9 @@
     "commitmsg": "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
     "postinstall": "npm run setup",
     "postsetup": "echo repo-cooker link",
-    "setup": "echo repo-cooker prepublish"
+    "setup": "echo repo-cooker prepublish",
+    "format": "npm run lint -- --fix",
+    "lint": "eslint \"**/*.js\""
   },
   "dependencies": {
   },
@@ -24,6 +26,15 @@
     "commitizen": "^2.9.6",
     "cz-customizable": "^5.0.0",
     "cz-customizable-ghooks": "^1.5.0",
-    "husky": "^0.14.1"
+    "eslint": "^4.1.1",
+    "eslint-config-prettier": "^2.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.1",
+    "prettier": "^1.5.2"
   }
 }
