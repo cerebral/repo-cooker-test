@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
+    "release": "babel-node scripts/publish.js",
     "commitmsg": "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
     "postinstall": "npm run setup",
     "postsetup": "echo repo-cooker link",
