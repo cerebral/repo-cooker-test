@@ -1,7 +1,3 @@
-// import {sequence, parallel} from 'function-tree'
-// import {} from 'repo-cooker'
-
-// tree to run with `repo-cooker publish`. extra arguments could be parsed and putted in props
 import { cooker } from './cooker'
 import * as cook from 'repo-cooker/actions'
 
