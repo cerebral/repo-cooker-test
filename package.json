@@ -7,11 +7,10 @@
     "commit": "git-cz",
     "release": "babel-node scripts/publish.js",
     "commitmsg": "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
-    "postinstall": "npm run setup",
-    "postsetup": "echo repo-cooker link",
-    "setup": "echo repo-cooker prepublish",
+    "prepublish": "echo 'prepublish'",
     "format": "npm run lint -- --fix",
-    "lint": "eslint \"**/*.js\""
+    "lint": "eslint \"**/*.js\"",
+    "test": "echo 'ALL GOOD'"
   },
   "repository": {
     "type": "git",
@@ -28,7 +27,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-plugin-module-alias": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "commitizen": "^2.9.6",
     "cz-customizable": "^5.0.0",
@@ -42,6 +40,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.1",
-    "prettier": "^1.5.2"
+    "prettier": "^1.5.2",
+    "repo-cooker": "^2.0.0"
   }
 }
