@@ -1,0 +1,27 @@
+sudo: false
+language: node_js
+node_js: '6'
+cache:
+  directories:
+  - node_modules
+git:
+  depth: 50
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libstdc++-4.9-dev
+notifications:
+  email: false
+script:
+  - npm test
+after_success:
+- |
+  if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
+    printf "init.author.name=Gaspard Bucher\ninit.author.email=gaspard@lucidogen.io\ninit.author.url=http://lucidogen.io\nprogress=true\n//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc
+    npm run release -- --publish
+  fi
+branches:
+  except:
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
