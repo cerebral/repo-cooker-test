@@ -1,0 +1,19 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "semi": false,
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.json",
+      "options": { "parser": "json" }
+    }
+  ],
+  "parser": "babylon"
+}
