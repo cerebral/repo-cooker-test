@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "release": "repo-cooker publish",
+    "release": "repo-cooker --release",
     "commitmsg":
       "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
     "prepublish": "echo 'prepublish'",
