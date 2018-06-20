@@ -8,7 +8,7 @@
     "release": "repo-cooker --release",
     "commitmsg":
       "node ./node_modules/cz-customizable-ghooks/lib/index.js .git/COMMIT_EDITMSG",
-    "prepublish": "echo 'prepublish'",
+    "prepare": "echo 'prepare'",
     "format": "npm run lint -- --fix",
     "lint": "eslint \"**/*.js\"",
     "test": "echo 'ALL GOOD'"
