@@ -1,4 +1,5 @@
 {
+  "root": true,
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module",
@@ -24,7 +25,8 @@
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "semi": false
+        "semi": false,
+        "parser": "babel"
       }
     ],
     "standard/computed-property-even-spacing": "off"
